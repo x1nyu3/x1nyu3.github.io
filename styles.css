@@ -1,1 +1,37 @@
-
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+    box-sizing: border-box;
+}
+body
+{
+    justify-content: center;
+    align-items: center;
+    background: #1f1f1f;
+    color: white;
+    font-size: 40
+}
+.box .form .inputbox
+{
+    padding: 5px 0px;
+    background: #222222;
+}
+.box .form .sub
+{
+    padding: 5px 85px;
+    background: #BB86FC;
+    font-size: 50;
+}
+.btn
+{
+    padding: 5px 50px;
+    background: #BB86FC;
+}
+.form .generate_question 
+{
+    padding: 5px 50px;
+    background: #BB86FC;
+    font-size: 50;
+}
