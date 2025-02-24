@@ -17,8 +17,8 @@
 <html>
   <head>
     <title>litmus questions</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <center>
@@ -132,8 +132,8 @@
         const questionInput = document.getElementById("question").value.trim();
         const nameInput = document.getElementById("name").value.trim();
     
-        if (questionInput === "" || nameInput === "") {
-          alert("Please enter both a question and your name.");
+        if (questionInput === "") {
+          alert("Enter a question to submit.");
           return;
         }
     
