@@ -149,7 +149,21 @@
           console.error("Error submitting question:", error);
         });
       });
-    
+
+           document.getElementById("all").addEventListener('click', async function (e) {
+        e.preventDefault();
+        await fetchAllQuestions();
+        
+        const allQuestionsList = document.getElementById("allQuestionsList");
+        allQuestionsList.innerHTML = "";
+        
+        allQuestions.forEach(question => {
+          const questionElement = document.createElement("p");
+          questionElement.textContent = question;
+          allQuestionsList.appendChild(questionElement);
+        });
+      });
+
       // Fetch questions when the page loads
       fetchAllQuestions();
     </script>    
