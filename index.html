@@ -1,5 +1,5 @@
 <body class="image">
-  <img src="litmus.png" style="width:35px;height:46px;transform: translate(10px,6px)">
+  <img src="litmus_1.png" style="width:35px;height:42px;transform: translate(10px,6px)">
 </body>
 
 <body class="top">
@@ -12,7 +12,7 @@
     </center>
 </body>
 
-<br>
+<br> 
 
 <html>
   <head>
@@ -66,14 +66,18 @@
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
-                margin: 20px 0px;}
+                margin: 0px 0px;}
             </style>
             <body>
             <div id="line"></div>
         </form>
       </div>
       <div>
-        <input type="submit" value="see all questions ↓" class="all" id="all">
+        <button type="button" class="all" id="all">
+          <img src="litmus_2.png" style="width:28px;height:33px;transform: translate(0px,-20px)"/>
+        </button>
+      </div>
+      <div id="allQuestionsList" class="all_list">
       </div>
     </div>
     <script type="module">
@@ -152,7 +156,8 @@
           alert("Enter a question to submit.");
           return;
         }
-    
+      
+
         // Submit the question to Firebase
         set(ref(db, 'questions/' + Date.now()), {
           question: questionInput,
@@ -165,23 +170,41 @@
           console.error("Error submitting question:", error);
         });
       });
+    
+              document.getElementById("all").addEventListener('click', async function (e) {
+          e.preventDefault();
+          console.log("Button clicked");
 
-           document.getElementById("all").addEventListener('click', async function (e) {
-        e.preventDefault();
-        await fetchAllQuestions();
-        
-        const allQuestionsList = document.getElementById("allQuestionsList");
-        allQuestionsList.innerHTML = "";
-        
-        allQuestions.forEach(question => {
-          const questionElement = document.createElement("p");
-          questionElement.textContent = question;
-          allQuestionsList.appendChild(questionElement);
+          await fetchAllQuestions();
+          console.log("All questions fetched:", allQuestions);
+          
+          const allQuestionsList = document.getElementById("allQuestionsList");
+          console.log("All questions list element:", allQuestionsList);
+          
+          // Toggle visibility
+          if (allQuestionsList.classList.contains('show')) {
+            console.log("Hiding list");
+            allQuestionsList.classList.remove('show');
+          } else {
+            console.log("Showing list");
+            // Clear previous content
+            allQuestionsList.innerHTML = "";
+            
+            // Append all questions
+            allQuestions.forEach(question => {
+              const questionElement = document.createElement("p");
+              questionElement.textContent = question;
+              allQuestionsList.appendChild(questionElement);
+            });
+            
+            // Show the list
+            allQuestionsList.classList.add('show');
+          }
         });
-      });
 
       // Fetch questions when the page loads
       fetchAllQuestions();
+
     </script>    
   </body>
 </html>
