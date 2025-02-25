@@ -75,3 +75,24 @@ body
 {
     color: transparent;
 }
+.all
+{
+    font-size: 15;
+    color: rgb(206, 206, 206);
+    padding: 10px 30px;
+    background: transparent;
+    font-weight: 450;
+    border: transparent;
+    text-decoration: underline;
+}
+.all_list {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .all_list.show {
+    display: block; /* Show when the 'show' class is added */
+  }
