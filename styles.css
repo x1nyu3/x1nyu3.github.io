@@ -12,7 +12,7 @@ body
     font-family: helvetica, black;
     font-weight: 590;
     color: black;
-    font-size: 40;
+    font-size: 60;
 }
 .top
 {
@@ -24,7 +24,7 @@ body
     padding: 10px 30px;
     background: #ffce3a;
     color: black;
-    font-size: 30;
+    font-size: 50;
     border-radius: 50px;
     font-weight: 450;
     border: 2px solid black;
@@ -39,7 +39,7 @@ body
     padding: 10px 30px;
     background: #baaafa;
     color: black;
-    font-size: 30;
+    font-size: 50;
     border-radius: 50px;
     font-weight: 450;
     border: 2px solid black;
@@ -60,7 +60,7 @@ body
 {
     border-radius: 50px;
     border: none;
-    font-size: 20;
+    font-size: 40;
     width: 500px;
     padding: 10px 20px;
     outline: none;
@@ -84,6 +84,7 @@ body
     font-weight: 450;
     border: transparent;
     text-decoration: underline;
+    font-size: 20;
 }
 .all_list {
     display: none; /* Initially hidden */
