@@ -26,7 +26,7 @@ body
     background: #ffce3a;
     color: black;
     font-size: 55;
-    border-radius: 150px;
+    border-radius: 400px;
     font-weight: 450;
     border: 2px solid black;
 }
@@ -41,7 +41,7 @@ body
     background: #baaafa;
     color: black;
     font-size: 55;
-    border-radius: 150px;
+    border-radius: 400px;
     font-weight: 450;
     border: 2px solid black;
 }
