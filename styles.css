@@ -29,6 +29,7 @@ body
     border-radius: 400px;
     font-weight: 450;
     border: 2px solid black;
+    webkit-appearance: none;
 }
 .btn
 {
@@ -44,6 +45,7 @@ body
     border-radius: 400px;
     font-weight: 450;
     border: 2px solid black;
+    webkit-appearance: none;
 }
 .litmus
 {
